@@ -5,7 +5,9 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"D:/Unreal Engine Project/Crypt-Raider/Crypt_Raider/Content/Dungeon.umap"
+				"D:/Unreal Engine Project/Crypt-Raider/Crypt_Raider/Content/Dungeon.umap",
+				"D:/Unreal Engine Project/Crypt-Raider/Crypt_Raider/Content/BP_Torch_Dungeon.uasset",
+				"D:/Unreal Engine Project/Crypt-Raider/Crypt_Raider/Content/MedievalDungeon/Materials/M_Tiling_Master.uasset"
 			]
 		}
 	]
