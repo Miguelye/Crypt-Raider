@@ -11,12 +11,14 @@
 				"D:/Unreal Engine Project/Crypt-Raider/Crypt_Raider/Content/BP_SpotLight_Puzzle.uasset",
 				"D:/Unreal Engine Project/Crypt-Raider/Crypt_Raider/Content/MedievalDungeon/Blueprints/BP_Chandalier.uasset",
 				"D:/Unreal Engine Project/Crypt-Raider/Crypt_Raider/Content/MedievalDungeon/Meshes/Architecture/Dungeon/SM_Floor.uasset",
-				"D:/Unreal Engine Project/Crypt-Raider/Crypt_Raider/Content/BP_FirstPersonCharacter_Child.uasset",
 				"D:/Unreal Engine Project/Crypt-Raider/Crypt_Raider/Content/BP_Player.uasset",
 				"D:/Unreal Engine Project/Crypt-Raider/Crypt_Raider/Content/BP_CryptRaiderGameMode.uasset",
 				"C:/UE_5.3/Engine/Content/EditorResources/Ai_Spawnpoint_Mat.uasset",
 				"D:/Unreal Engine Project/Crypt-Raider/Crypt_Raider/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/8/Z7/W1SXRCM1KAKBJOIZDLHZ47.uasset",
-				"D:/Unreal Engine Project/Crypt-Raider/Crypt_Raider/Content/FirstPerson/Blueprints/BP_FirstPersonCharacter.uasset"
+				"D:/Unreal Engine Project/Crypt-Raider/Crypt_Raider/Content/FirstPerson/Blueprints/BP_FirstPersonCharacter.uasset",
+				"D:/Unreal Engine Project/Crypt-Raider/Crypt_Raider/Content/FirstPerson/Input/Actions/IA_Grab.uasset",
+				"D:/Unreal Engine Project/Crypt-Raider/Crypt_Raider/Content/FirstPerson/Input/IMC_Default.uasset",
+				"D:/Unreal Engine Project/Crypt-Raider/Crypt_Raider/Content/BP_FirstPersonCharacter_Child.uasset"
 			]
 		}
 	]

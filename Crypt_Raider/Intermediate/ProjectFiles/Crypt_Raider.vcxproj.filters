@@ -42,6 +42,12 @@
     <ClInclude Include="..\..\Source\Crypt_Raider\Crypt_Raider.h">
       <Filter>Source\Crypt_Raider</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Crypt_Raider\Grabber.cpp">
+      <Filter>Source\Crypt_Raider</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Crypt_Raider\Grabber.h">
+      <Filter>Source\Crypt_Raider</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Crypt_Raider\Mover.cpp">
       <Filter>Source\Crypt_Raider</Filter>
     </ClCompile>

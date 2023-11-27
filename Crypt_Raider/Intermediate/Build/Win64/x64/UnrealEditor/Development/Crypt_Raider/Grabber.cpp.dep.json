@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\unreal engine project\\crypt-raider\\crypt_raider\\source\\crypt_raider\\grabber.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\unreal engine project\\crypt-raider\\crypt_raider\\intermediate\\build\\win64\\x64\\crypt_raidereditor\\development\\engine\\sharedpch.engine.cpp20.inclorderunreal5_0.h.pch",
+        "Includes": [
+            "d:\\unreal engine project\\crypt-raider\\crypt_raider\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\crypt_raider\\definitions.crypt_raider.h",
+            "d:\\unreal engine project\\crypt-raider\\crypt_raider\\source\\crypt_raider\\grabber.h",
+            "d:\\unreal engine project\\crypt-raider\\crypt_raider\\intermediate\\build\\win64\\unrealeditor\\inc\\crypt_raider\\uht\\grabber.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -17,13 +17,13 @@ void EmptyLinkFunctionForGeneratedCodeCrypt_Raider_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x21D02509,
-				0x1B244FA9,
+				0x5697EBB5,
+				0x367A2EA1,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_Crypt_Raider.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_Crypt_Raider.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Crypt_Raider(Z_Construct_UPackage__Script_Crypt_Raider, TEXT("/Script/Crypt_Raider"), Z_Registration_Info_UPackage__Script_Crypt_Raider, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x21D02509, 0x1B244FA9));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Crypt_Raider(Z_Construct_UPackage__Script_Crypt_Raider, TEXT("/Script/Crypt_Raider"), Z_Registration_Info_UPackage__Script_Crypt_Raider, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x5697EBB5, 0x367A2EA1));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
