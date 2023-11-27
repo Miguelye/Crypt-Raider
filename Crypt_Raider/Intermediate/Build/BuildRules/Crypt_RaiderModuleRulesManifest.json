@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\Unreal Engine Project\\Crypt-Raider\\Crypt_Raider\\Source\\Crypt_Raider\\Crypt_Raider.Build.cs",
+		"D:\\Unreal Engine Project\\Crypt-Raider\\Crypt_Raider\\Source\\Crypt_Raider.Target.cs",
+		"D:\\Unreal Engine Project\\Crypt-Raider\\Crypt_Raider\\Source\\Crypt_RaiderEditor.Target.cs"
+	],
+	"EngineVersion": "5.3.2"
+}

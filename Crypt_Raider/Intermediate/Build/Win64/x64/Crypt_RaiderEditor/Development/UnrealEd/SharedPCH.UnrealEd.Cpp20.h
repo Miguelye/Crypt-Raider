@@ -1,0 +1,3 @@
+// PCH for Editor/UnrealEd/Public/UnrealEdSharedPCH.h
+#include "D:/Unreal Engine Project/Crypt-Raider/Crypt_Raider/Intermediate/Build/Win64/x64/Crypt_RaiderEditor/Development/UnrealEd/SharedDefinitions.UnrealEd.Cpp20.h"
+#include "Editor/UnrealEd/Public/UnrealEdSharedPCH.h"
