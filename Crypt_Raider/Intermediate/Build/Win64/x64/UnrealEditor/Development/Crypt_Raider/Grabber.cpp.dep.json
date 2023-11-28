@@ -7,6 +7,8 @@
         "Includes": [
             "d:\\unreal engine project\\crypt-raider\\crypt_raider\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\crypt_raider\\definitions.crypt_raider.h",
             "d:\\unreal engine project\\crypt-raider\\crypt_raider\\source\\crypt_raider\\grabber.h",
+            "c:\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\physicsengine\\physicshandlecomponent.h",
+            "c:\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\physicshandlecomponent.generated.h",
             "d:\\unreal engine project\\crypt-raider\\crypt_raider\\intermediate\\build\\win64\\unrealeditor\\inc\\crypt_raider\\uht\\grabber.generated.h"
         ],
         "ImportedModules": [],
