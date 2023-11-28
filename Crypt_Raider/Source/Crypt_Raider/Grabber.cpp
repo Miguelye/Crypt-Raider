@@ -31,38 +31,38 @@ void UGrabber::BeginPlay()
 void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	FVector TargetLocation = GetComponentLocation() + GetForwardVector() * HoldDistance;
-	PhysicsHandle->SetTargetLocationAndRotation(TargetLocation, GetComponentRotation());
+	if (PhysicsHandle->GetGrabbedComponent() != nullptr)
+	{
+		FVector TargetLocation = GetComponentLocation() + GetForwardVector() * HoldDistance;
+		PhysicsHandle->SetTargetLocationAndRotation(TargetLocation, GetComponentRotation());
+	}
 }
 
 void UGrabber::Release()
 {
+	if (PhysicsHandle->GetGrabbedComponent() != nullptr)
+	{
+		PhysicsHandle->GetGrabbedComponent()->WakeAllRigidBodies();
+		PhysicsHandle->ReleaseComponent();
+	}
+
 	UE_LOG(LogTemp, Display, TEXT("Released grabber"));
 }
 
 void UGrabber::Grab()
 {
-	FVector Start = GetComponentLocation(); //Start Location of the Ray Line
-	FVector End = Start + GetForwardVector() * MaxGrabDistance; //End Location of the Ray Line
-	DrawDebugLine(GetWorld(), Start, End, FColor::Red); //Draws the rayline for debugging
-	DrawDebugSphere(GetWorld(), End, 10, 10, FColor::Blue, false, 5);
+	FHitResult HitResult; //Object we trying to grab
 
-	FCollisionShape Sphere = FCollisionShape::MakeSphere(GrabRadius); //creates a sphere which is going to traverse the distance by SweepSingleByChannel
-	FHitResult HitResult; //Object that collided by the sphere
-
-	//Traces a line and the sweeps it with the desire shape and adds the first object collided to the HitResult variable.
-	//FQuat::Identity Returns 0
-	//ECC_GameTraceChannel12 is the channel of Grabber.
-	bool HadHit = GetWorld()->SweepSingleByChannel(HitResult, Start, End, FQuat::Identity, ECC_GameTraceChannel2, Sphere);
-
-	if (HadHit)
+	if (GetGrabbableInReach(HitResult))
 	{
-		PhysicsHandle->GrabComponentAtLocationWithRotation(
-			HitResult.GetComponent(),
-			NAME_None,
-			HitResult.ImpactPoint,
-			GetComponentRotation()
+		UPrimitiveComponent* HitComponent = HitResult.GetComponent();
+		HitComponent->WakeAllRigidBodies(); //Ensures simulation is running for all bodies in this component
+
+		PhysicsHandle->GrabComponentAtLocationWithRotation(	
+			HitComponent,									//Component we want to grab
+			NAME_None,										//name of the part of the component we want to grab
+			HitResult.ImpactPoint,							//Location
+			GetComponentRotation()							//Rotation
 		);
 	}
 	else
@@ -80,4 +80,23 @@ UPhysicsHandleComponent* UGrabber::GetPhysicsHandle() const
 		UE_LOG(LogTemp, Error, TEXT("Grabber requires a UPhysicsHandleComponent."));
 	}
 	return Result;
+}
+
+bool UGrabber::GetGrabbableInReach(FHitResult& OutHitResult)
+{
+	FVector Start = GetComponentLocation(); //Start Location of the Ray Line
+	FVector End = Start + GetForwardVector() * MaxGrabDistance; //End Location of the Ray Line
+	DrawDebugLine(GetWorld(), Start, End, FColor::Red); //Draws the rayline for debugging
+	DrawDebugSphere(GetWorld(), End, 10, 10, FColor::Blue, false, 5); //Draws a sphere at the end of the reach distance
+
+	FCollisionShape Sphere = FCollisionShape::MakeSphere(GrabRadius); //creates a sphere which is going to traverse the distance by SweepSingleByChannel
+
+	//Traces a line and then sweeps it with the desire shape and adds the first object collided to the HitResult variable.
+	return GetWorld()->SweepSingleByChannel(
+		OutHitResult,								//Object that collided by the sphere
+		Start,										//Start location of the sweep
+		End,										//End location of the sweep
+		FQuat::Identity,							//FQuat::Identity Returns 0
+		ECC_GameTraceChannel2,						//ECC_GameTraceChannel12 is the channel of Grabber.
+		Sphere);									//Shape of the object to perform the sweep with.
 }

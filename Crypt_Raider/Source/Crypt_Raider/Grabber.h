@@ -31,7 +31,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void Release();
 
-	UPhysicsHandleComponent* GetPhysicsHandle() const;
+	UPhysicsHandleComponent* GetPhysicsHandle() const; //checks if we have a PhysicsHandle component if we do it returns it.
+	bool GetGrabbableInReach(FHitResult& OutHitResult); //Checks if object that is grabbable is within reach
 	
 private:
 	UPROPERTY(EditAnywhere)
